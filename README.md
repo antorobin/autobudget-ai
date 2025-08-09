@@ -39,6 +39,3 @@ An AI-powered finance platform using predictive analytics and anomaly detection 
 - MongoDB  
 - Prophet (Time-series forecasting)  
 - AI/ML for anomaly detection and recommendations
-
-
-tps://github.com/yourusername/autobudgetting-ai
