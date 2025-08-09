@@ -1,0 +1,538 @@
+{
+	"info": {
+		"_postman_id": "d08b6b71-feb3-4b4c-bd52-6bd8a92ca448",
+		"name": "Budgetting",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45232964",
+		"_collection_link": "https://www.postman.com/marshalantorobin/workspace/mock-server/collection/45232964-d08b6b71-feb3-4b4c-bd52-6bd8a92ca448?action=share&source=collection_link&creator=45232964"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": []
+		},
+		{
+			"name": "Cashflow",
+			"item": [
+				{
+					"name": "Fetch Transactions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/v1/transactions?user_id={{userId}}&months=6",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"transactions"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "{{userId}}"
+								},
+								{
+									"key": "months",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/v1/transactions?user_id={{userId}}&months=6",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"transactions"
+									],
+									"query": [
+										{
+											"key": "user_id",
+											"value": "{{userId}}"
+										},
+										{
+											"key": "months",
+											"value": "6"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\r\n  \"transactions\": [\r\n    {\r\n      \"date\": \"2025-07-01\",\r\n      \"amount\": 6500,\r\n      \"category\": \"groceries\",\r\n      \"meta\": {\r\n        \"merchant\": \"Big Bazaar\",\r\n        \"payment_method\": \"UPI\",\r\n        \"notes\": \"Monthly stock-up\"\r\n      }\r\n    },\r\n    {\r\n      \"date\": \"2025-07-05\",\r\n      \"amount\": 1200,\r\n      \"category\": \"transport\",\r\n      \"meta\": {\r\n        \"mode\": \"Ola\",\r\n        \"distance_km\": 15\r\n      }\r\n    },\r\n    {\r\n      \"date\": \"2025-07-10\",\r\n      \"amount\": 45000,\r\n      \"category\": \"salary\",\r\n      \"meta\": {\r\n        \"employer\": \"Acme Corp\",\r\n        \"type\": \"income\"\r\n      }\r\n    }\r\n  ]\r\n}"
+						}
+					]
+				},
+				{
+					"name": "Fetch Budgets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/v1/budgets?user_id={{userId}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"budgets"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "{{userId}}"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/v1/budgets?user_id={{userId}}&months=12",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"budgets"
+									],
+									"query": [
+										{
+											"key": "user_id",
+											"value": "{{userId}}"
+										},
+										{
+											"key": "months",
+											"value": "12"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\r\n  \"budgets\": [\r\n    {\r\n      \"category\": \"groceries\",\r\n      \"monthly\": 6000,\r\n      \"type\": \"expense\"\r\n    },\r\n    {\r\n      \"category\": \"rent\",\r\n      \"monthly\": 15000,\r\n      \"type\": \"expense\"\r\n    },\r\n    {\r\n      \"category\": \"income\",\r\n      \"monthly\": 45000,\r\n      \"type\": \"income\"\r\n    }\r\n  ]\r\n}"
+						},
+						{
+							"name": "Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/v1/budgets?user_id={{userId}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"budgets"
+									],
+									"query": [
+										{
+											"key": "user_id",
+											"value": "{{userId}}"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\r\n  \"budgets\": [\r\n    {\r\n      \"budget_id\": \"bgt-001\",\r\n      \"user_id\": \"12345\",\r\n      \"name\": \"Monthly Groceries\",\r\n      \"category\": \"Food\",\r\n      \"limit\": 500.00,\r\n      \"currency\": \"USD\",\r\n      \"spent\": 320.75,\r\n      \"start_date\": \"2025-08-01\",\r\n      \"end_date\": \"2025-08-31\",\r\n      \"status\": \"active\"\r\n    },\r\n    {\r\n      \"budget_id\": \"bgt-002\",\r\n      \"user_id\": \"12345\",\r\n      \"name\": \"Entertainment\",\r\n      \"category\": \"Leisure\",\r\n      \"limit\": 200.00,\r\n      \"currency\": \"USD\",\r\n      \"spent\": 150.50,\r\n      \"start_date\": \"2025-08-01\",\r\n      \"end_date\": \"2025-08-31\",\r\n      \"status\": \"active\"\r\n    }\r\n  ]\r\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Budgeting",
+			"item": []
+		},
+		{
+			"name": "Notifications",
+			"item": []
+		},
+		{
+			"name": "AI Reasoning",
+			"item": [
+				{
+					"name": "Forcast Essentials",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"user_id\": \"{{userId}}\",\r\n  \"history_months\": 12,\r\n  \"category_list\": [\"groceries\", \"rent\", \"EMI\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ai_reasoning_url}}/forecast/essentials",
+							"host": [
+								"{{ai_reasoning_url}}"
+							],
+							"path": [
+								"forecast",
+								"essentials"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Forcast Essentials",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"user_id\": \"{{userId}}\",\r\n  \"history_months\": 12,\r\n  \"category_list\": [\"groceries\", \"rent\", \"EMI\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{ai_reasoning_url}}/forecast/essentials",
+									"host": [
+										"{{ai_reasoning_url}}"
+									],
+									"path": [
+										"forecast",
+										"essentials"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date"
+								}
+							],
+							"body": "{\n    \"predictions\": {\n        \"groceries\": 12000.5,\n        \"rent\": 25000,\n        \"EMI\": 15000\n    },\n    \"warnings\": [\n        \"Predicted expenses may exceed projected income by ₹5000.\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Advice Savings",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"user_id\": \"{{userId}}\",\r\n  \"history_months\": 12,\r\n  \"income\": 60000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ai_reasoning_url}}/advice/savings",
+							"host": [
+								"{{ai_reasoning_url}}"
+							],
+							"path": [
+								"advice",
+								"savings"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Advice Savings",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"user_id\": \"{{userId}}\",\r\n  \"history_months\": 12,\r\n  \"income\": 60000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{ai_reasoning_url}}/advice/savings",
+									"host": [
+										"{{ai_reasoning_url}}"
+									],
+									"path": [
+										"advice",
+										"savings"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date"
+								}
+							],
+							"body": "{\r\n  \"safe_to_save\": 15000,\r\n  \"reasoning\": \"Based on avg monthly spend ₹30000 and spikes buffer ₹15000.\"\r\n}"
+						}
+					]
+				},
+				{
+					"name": "Alerts Festival Budget",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"user_id\": \"{{userId}}\",\r\n  \"upcoming_events\": [\"Diwali\", \"Pongal\", \"Raksha Bandhan\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ai_reasoning_url}}/alerts/festival-budget",
+							"host": [
+								"{{ai_reasoning_url}}"
+							],
+							"path": [
+								"alerts",
+								"festival-budget"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Alerts Festival Budget",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"user_id\": \"{{userId}}\",\r\n  \"upcoming_events\": [\"Diwali\", \"Pongal\", \"Raksha Bandhan\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{ai_reasoning_url}}/alerts/festival-budget",
+									"host": [
+										"{{ai_reasoning_url}}"
+									],
+									"path": [
+										"alerts",
+										"festival-budget"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date"
+								}
+							],
+							"body": "{\r\n  \"festival_budgets\": {\r\n    \"Diwali\": 12000,\r\n    \"Pongal\": 5000,\r\n    \"Raksha Bandhan\": 7000\r\n  },\r\n  \"suggestions\": [\r\n    \"Based on past events for Diwali.\",\r\n    \"No history found; assign a conservative budget for Pongal.\",\r\n    \"Estimate for Raksha Bandhan based on proxy months.\"\r\n  ]\r\n}"
+						}
+					]
+				},
+				{
+					"name": "Score Spending Health",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ai_reasoning_url}}/score/spending-health/{{userId}}?months=6",
+							"host": [
+								"{{ai_reasoning_url}}"
+							],
+							"path": [
+								"score",
+								"spending-health",
+								"{{userId}}"
+							],
+							"query": [
+								{
+									"key": "months",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{ai_reasoning_url}}/alerts/festival-budget",
+									"host": [
+										"{{ai_reasoning_url}}"
+									],
+									"path": [
+										"alerts",
+										"festival-budget"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date"
+								}
+							],
+							"body": "{\r\n  \"score\": 72,\r\n  \"grade\": \"Fair\",\r\n  \"positive_factors\": [\"Bills paid on time\"],\r\n  \"negative_factors\": [\"High impulse spends ₹4000\"],\r\n  \"recommendations\": \"Cut back on food delivery and save at least 10% more each month.\"\r\n}"
+						}
+					]
+				},
+				{
+					"name": "Monitor Bills",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"user_id\": \"{{userId}}\",\r\n  \"bills\": [\r\n    {\r\n      \"type\": \"groceries\",\r\n      \"amount\": 350000.0,\r\n      \"date\": \"2025-08-01\"\r\n    },\r\n    {\r\n      \"type\": \"transport\",\r\n      \"amount\": 800.0\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ai_reasoning_url}}/monitor/bills",
+							"host": [
+								"{{ai_reasoning_url}}"
+							],
+							"path": [
+								"monitor",
+								"bills"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"user_id\": \"{{userId}}\",\r\n  \"bills\": [\r\n    {\r\n      \"type\": \"groceries\",\r\n      \"amount\": 350000.0,\r\n      \"date\": \"2025-08-01\"\r\n    },\r\n    {\r\n      \"type\": \"transport\",\r\n      \"amount\": 800.0\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{ai_reasoning_url}}/monitor/bills",
+									"host": [
+										"{{ai_reasoning_url}}"
+									],
+									"path": [
+										"monitor",
+										"bills"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date"
+								}
+							],
+							"body": "{\r\n  \"alerts\": [\r\n    {\r\n      \"bill\": \"electricity\",\r\n      \"issue\": \"Amount is higher than usual\",\r\n      \"suggestion\": \"Check if there were additional appliances or seasonal usage spike.\"\r\n    }\r\n  ]\r\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
