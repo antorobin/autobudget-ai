@@ -57,7 +57,7 @@ MONGO_URI = os.getenv("MONGO_URI", "mongodb://localhost:27017")
 CASHFLOW_URL = os.getenv("CASHFLOW_URL", "https://b0c3083f-ee9d-4d61-9bd1-5119d3d94674.mock.pstmn.io")
 BUDGET_URL = os.getenv("BUDGET_URL", "https://b0c3083f-ee9d-4d61-9bd1-5119d3d94674.mock.pstmn.io")
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
-GROQ_API_KEY = os.getenv("GROQ_API_KEY", "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")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY", "YOUR-GROK-API-KEY")
 # GROQ_MODEL = os.getenv("GROQ_MODEL", "mixtral-8x7b-32768")  # default Groq model
 GROQ_MODEL = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
 
@@ -582,3 +582,4 @@ async def health():
     return {"status": "ok", "time": datetime.datetime.utcnow().isoformat()}
 
 # EOF
+
